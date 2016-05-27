@@ -3,12 +3,12 @@ matrix:
     - os: linux
       sudo: required
       dist: trusty
+      python: "2.7"
     - os: linux
       sudo: false
       dist: precise
+      python: "2.7"
 language: python
-python:
-  - "2.7"
 addons:
   apt:
     packages:

@@ -2,11 +2,13 @@ matrix:
   include:
     - os: linux
       sudo: required
-      dist: trust
+      dist: trusty
     - os: linux
       sudo: false
       dist: precise
 language: python
+python:
+  - "2.7"
 addons:
   apt:
     packages:
@@ -18,8 +20,6 @@ cache:
         - usr
         - /home/travis/virtualenv/python2.7.9/lib/python2.7/site-packages/
         - /home/travis/virtualenv/python2.7.9/bin/
-python:
-  - "2.7"
 before_install:
   - source .travis_install.sh
   - source .travis_ssh_setup.sh

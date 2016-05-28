@@ -42,6 +42,10 @@ setup_travis()
         get_qemu
     fi
 
+    if ! which arm-linux-gnueabihf-gcc; then
+        sudo apt-get install -yf gcc-multilib arm-linux-gnueabihf-gcc
+    fi
+
     # Get rid of files we don't want cached
     rm -rf usr/share
 

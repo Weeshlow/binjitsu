@@ -9,12 +9,6 @@ matrix:
       dist: precise
       python: "2.7"
 language: python
-cache:
-    - pip
-    - directories:
-        - usr
-        - /home/travis/virtualenv/python2.7.9/lib/python2.7/site-packages/
-        - /home/travis/virtualenv/python2.7.9/bin/
 before_install:
   - source .travis_install.sh
   - source .travis_ssh_setup.sh

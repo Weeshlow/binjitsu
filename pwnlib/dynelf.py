@@ -67,7 +67,10 @@ the target address space.
     ... def leak(addr):
     ...     with open('/proc/self/mem', 'rb') as mem:
     ...         mem.seek(addr)
-    ...         return mem.read(32)
+    ...         try:
+    ...             return mem.read(32)
+    ...         except:
+    ...             pass
 
 Now we can find arbitrary functions, in arbitrary modules.
 

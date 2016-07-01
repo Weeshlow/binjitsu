@@ -64,10 +64,10 @@ Next, let's describe a leak function which can return memory from
 the target address space.
 
     >>> @MemLeak
-    ..: def leak(addr):
-    ..:     with open('/proc/self/mem', 'rb') as mem:
-    ..:         mem.seek(addr)
-    ..:         return mem.read(32)
+    ... def leak(addr):
+    ...     with open('/proc/self/mem', 'rb') as mem:
+    ...         mem.seek(addr)
+    ...         return mem.read(32)
 
 Now we can find arbitrary functions, in arbitrary modules.
 

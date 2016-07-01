@@ -1,4 +1,4 @@
-"""
+r"""
 Resolve symbols in loaded, dynamically-linked ELF binaries.
 Given a function which can leak data at an arbitrary address,
 any symbol in any loaded library can be resolved.

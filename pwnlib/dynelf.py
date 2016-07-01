@@ -82,8 +82,9 @@ or stack control to do this, but we can do it properly with ctypes.
 
     >>> import ctypes
     >>> system_functype = ctypes.CFUNCTYPE(None, ctypes.c_char_p)
-    >>> system_functype(system)("echo hello")
-    hello
+    >>> system_functype(system)("echo hello > hello.dynelf")
+    >>> read('hello.dynelf')
+    'hello\n'
 
 DynELF
 """
